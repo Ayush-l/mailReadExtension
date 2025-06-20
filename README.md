@@ -19,7 +19,9 @@ We could have used an invisible pixel at the end of body to check whether the ma
                 b. visit()-> It changes the status of the mail id to visited using the boolean variable named visit.
                 c. createMail()-> It create a new Mail in database with visit=false and id's value taken as parameter.
     #Controllers
-        Package containing all the api-end points
+        Package containing all the api-endpoints
         #MailController.java
             It contains 3 api endpoints.
-                a.
+                a. /mail/create/{id}-> it is the api endpoint for creating a new mail class with parameter id.
+                b. /mail/visit/{id}-> it is the api endpoint for marking the mail classObjects as visited.
+                c. /mail/isvisited/{id}-> it is the api endpoint for checking whether the mail has been seen or not.
