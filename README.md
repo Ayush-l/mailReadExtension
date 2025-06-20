@@ -25,3 +25,8 @@ We could have used an invisible pixel at the end of body to check whether the ma
                 a. /mail/create/{id}-> it is the api endpoint for creating a new mail class with parameter id.
                 b. /mail/visit/{id}-> it is the api endpoint for marking the mail classObjects as visited.
                 c. /mail/isvisited/{id}-> it is the api endpoint for checking whether the mail has been seen or not.
+
+#FrontEnd
+    #Server.js
+        It is a javaScript file that Hosts an transparent pixel. Whenever this endpoint hits it calls backend server to mark that mail id to visited. Sender must not open this link otherwise the extension will show read(false information).
+    # 
