@@ -6,7 +6,7 @@ const fetch = require('node-fetch');
 // Serve tracking pixel and log open
 app.get('/blank', (req, res) => {
   const emailId = req.query.email_id;
-  const URL='https://cce8-2409-40d2-305e-bfb5-8cee-44db-b555-51b0.ngrok-free.app';
+  const URL='<BackEnd_URL>';
   fetch(`${URL}/mail/visit/${emailId}`, {
     method: 'PUT',
     headers: {

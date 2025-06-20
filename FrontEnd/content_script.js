@@ -45,7 +45,7 @@ const observeMailSeen = () => {
             if (emailId === lastEmailId) return; // skip duplicate checks
             lastEmailId = emailId;
 
-            const toFetchURL = 'https://cce8-2409-40d2-305e-bfb5-8cee-44db-b555-51b0.ngrok-free.app';
+            const toFetchURL = '<BackEnd_URL>'; // Replace with your backend URL
             fetch(`${toFetchURL}/mail/isvisited/${emailId}`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' }
@@ -83,13 +83,13 @@ const injectTrackingLink = () => {
     if (emailBody) {
         const id=senderEmail+Date.now();
         if (!emailBody.innerHTML.includes("blank?email_id=")) { 
-            const URL = `http://localhost:3000/blank?email_id=${id}`;
-            const URL1='https://cce8-2409-40d2-305e-bfb5-8cee-44db-b555-51b0.ngrok-free.app';
+            const URL = `<Replace with url provided by server.js>${id}`;
+            const URL1='<BackEnd_URL>';
             aTag.href=URL
             emailBody.innerHTML+="<BR>"
             emailBody.appendChild(aTag); 
             chrome.runtime.sendMessage({ type: "PIXEL_INSERTED", id: id });
-            fetch(`${URL1}/mail/create/${id}`,{method: 'POST',})
+            fetch(`${URL1}/mail/create/${id}`,{method: 'POST'})
         }
 
     }
