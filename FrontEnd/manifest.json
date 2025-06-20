@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  "name": "Email tracker Extension",
+  "version": "1.0",
+  "description": "A simple mail extension to tell whoever has seen the emails.",
+  "icons": {
+    "48": "icons/icon.png"
+  },
+  "permissions": ["tabs", "activeTab","*://*.ngrok-free.app/*"],
+  "background": {
+    "scripts": ["background_script.js"]
+  },
+  "content_scripts": [
+    {
+        "matches": ["*://mail.google.com/*"],
+        "js": ["content_script.js"],
+        "run_at": "document_idle"
+    }
+],
+  "browser_action": {
+    "default_icon": {
+      "64": "icons/icon.png"
+    }
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "mail_extension@example.com"
+    }
+  }
+}
+
+
