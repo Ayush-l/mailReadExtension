@@ -47,7 +47,7 @@ const observeMailSeen = () => {
 
             const toFetchURL = '<BackEnd_URL>'; // Replace with your backend URL
             fetch(`${toFetchURL}/mail/isvisited/${emailId}`, {
-                method: 'POST',
+                method: 'GET',
                 headers: { 'Content-Type': 'application/json' }
             })
             .then(res => res.json())

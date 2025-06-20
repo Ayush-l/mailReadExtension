@@ -30,7 +30,7 @@ public class MailController {
         return new ResponseEntity<>(HttpStatus.ACCEPTED);
     }
 
-    @PostMapping("/isvisited/{id}")
+    @GetMapping("/isvisited/{id}")
     public ResponseEntity<Integer> isVisited(@PathVariable String id) {
         int visited = mailService.isVisited(id);
         log.info("Checked isVisited for ID: {} => {}", id, visited);

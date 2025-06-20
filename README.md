@@ -9,3 +9,17 @@ We could have used an invisible pixel at the end of body to check whether the ma
 2. Gmail downloads the pixel from sender's end and does not hit the url from receiver's end.
 
 #BackEnd
+    We wrote backend in Spring Boot(Java based BackEnd frameword).
+    Created a class called mail to register all the mails send by user.
+    #Services
+        Package containing all the service classes made.
+        #MailService.java
+            It contains 3 functions.
+                a. isVisited()-> It returns -1 if the record is not present in database, return 1 if receiver has receiver has seen the mail and return 0 if receiver hasn't seen the mail.
+                b. visit()-> It changes the status of the mail id to visited using the boolean variable named visit.
+                c. createMail()-> It create a new Mail in database with visit=false and id's value taken as parameter.
+    #Controllers
+        Package containing all the api-end points
+        #MailController.java
+            It contains 3 api endpoints.
+                a.
