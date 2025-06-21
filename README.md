@@ -33,3 +33,7 @@ We could have used an invisible pixel at the end of body to check whether the ma
     #content_script.js
         It is the main file behind the functioning of extension it appends the button at the end of mail body when we send the mail and it also checks whether the mail is read or not whenever we open a mail.
         It also assigns a unique id for every mail in form of Sender'smail+Date.now() as a sender will be sending atmax 1 mail at a time this will always be unique.
+        It also assigns a unique url to that button using email of sender and Date and time.
+
+
+Note: If you want to test this code on your machine using localhost it won't work because you can't call a api with http protocol from a website following https protocol you may need to use ngrok.
