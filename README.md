@@ -11,6 +11,7 @@ We could have used an invisible pixel at the end of body to check whether the ma
 #BackEnd
     We wrote backend in Spring Boot(Java based BackEnd frameword).
     Created a class called mail to register all the mails send by user.
+    We used MongoDB atlas for a remote database.
     #Services
         Package containing all the service classes made.
         #MailService.java
@@ -29,4 +30,6 @@ We could have used an invisible pixel at the end of body to check whether the ma
 #FrontEnd
     #Server.js
         It is a javaScript file that Hosts an transparent pixel. Whenever this endpoint hits it calls backend server to mark that mail id to visited. Sender must not open this link otherwise the extension will show read(false information).
-    # 
+    #content_script.js
+        It is the main file behind the functioning of extension it appends the button at the end of mail body when we send the mail and it also checks whether the mail is read or not whenever we open a mail.
+        It also assigns a unique id for every mail in form of Sender'smail+Date.now() as a sender will be sending atmax 1 mail at a time this will always be unique.
