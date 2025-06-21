@@ -72,4 +72,4 @@ We could have used an invisible pixel at the end of body to check whether the ma
 
 
 
-Note: If you want to test this code on your machine using localhost it won't work because you can't call a api with http protocol from a website following https protocol you may need to use ngrok.
+Note: If you want to test this code on your machine using localhost it won't work because you can't call a api with http protocol from a website following https protocol you may need to use ngrok for your backend server.
